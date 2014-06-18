@@ -48,6 +48,7 @@ class ProductsController extends Controller
 	 */
 	public function actionView($id)
 	{
+                Yii::app()->user->setFlash("Added Flash Messages in the Product ListView");
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));

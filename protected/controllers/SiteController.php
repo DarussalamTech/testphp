@@ -29,7 +29,6 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-                Yii::app()->user->setFlash("This is the flash message that will appear on home page loads");
 		$this->render('index');
 	}
 

@@ -48,6 +48,7 @@ class CategoriesController extends Controller {
      * @param integer $id the ID of the model to be displayed
      */
     public function actionView($id) {
+            Yii::app()->user->setFlash("Added Flash Messages in the Categories ListView");
         $this->render('view', array(
             'model' => $this->loadModel($id), 
             'related_products' => Categories::model()->getRelatedProducts($id),
